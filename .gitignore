@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Production / misc build
+build/
+dist/
+
+# Debug & logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env (keep example files if you add them)
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE (uncomment if you do not want these in the repo)
+# .idea/
+# .vscode/
+
+# Testing
+coverage/
+
+# Optional: pnpm store in monorepos
+# .pnpm-store/

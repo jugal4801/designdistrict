@@ -5,9 +5,12 @@ import { TrustStatsSection } from '@/components/sections/trust-stats'
 import { BrandStorySection } from '@/components/sections/brand-story'
 import { ServicesSection } from '@/components/sections/services'
 import { WhyChooseUsSection } from '@/components/sections/why-choose-us'
-import { PortfolioSection } from '@/components/sections/portfolio'
+import { PortfolioEnhancedSection } from '@/components/sections/portfolio-enhanced'
+import { PortfolioStatsSection } from '@/components/sections/portfolio-stats'
 import { ProcessSection } from '@/components/sections/process'
 import { TestimonialsSection } from '@/components/sections/testimonials'
+import { TeamSection } from '@/components/sections/team'
+import { InquiryFormSection } from '@/components/sections/inquiry-form'
 import { CTASection } from '@/components/sections/cta'
 
 export default function Home() {
@@ -19,9 +22,12 @@ export default function Home() {
       <BrandStorySection />
       <ServicesSection />
       <WhyChooseUsSection />
-      <PortfolioSection />
+      <PortfolioEnhancedSection />
+      <PortfolioStatsSection />
       <ProcessSection />
       <TestimonialsSection />
+      <TeamSection />
+      <InquiryFormSection />
       <CTASection />
       <Footer />
     </main>

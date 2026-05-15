@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Instagram } from 'lucide-react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -41,20 +41,14 @@ export function Footer() {
             <p className="text-muted-foreground mb-4">
               Premium graphic design for visionary brands.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/something_exciting_is_coming?igsh=eDRnbXdqMTc3bzNn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-muted-foreground hover:text-accent transition-all duration-300 transform hover:scale-110"
+            >
+              <Instagram size={24} />
+            </a>
           </div>
 
           {/* Links sections */}
@@ -81,7 +75,7 @@ export function Footer() {
           {/* Contact section */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">
-              Get in Touch
+              Contact
             </h4>
             <ul className="space-y-3">
               <li>
@@ -92,19 +86,6 @@ export function Footer() {
                   <Mail size={16} />
                   <span>hello@nextpixelstudio.com</span>
                 </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+1-555-design"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors text-sm group"
-                >
-                  <Phone size={16} />
-                  <span>+1 (555) DESIGN</span>
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-muted-foreground text-sm">
-                <MapPin size={16} className="mt-0.5" />
-                <span>San Francisco, CA</span>
               </li>
             </ul>
           </div>

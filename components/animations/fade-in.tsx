@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
 interface FadeInProps {
   children: ReactNode
+  className?: string
   delay?: number
   duration?: number
   direction?: 'up' | 'down' | 'left' | 'right'
@@ -12,6 +14,7 @@ interface FadeInProps {
 
 export function FadeIn({
   children,
+  className,
   delay = 0,
   duration = 0.6,
   direction = 'up',
@@ -33,6 +36,7 @@ export function FadeIn({
 
   return (
     <motion.div
+      className={cn(className)}
       initial={getInitial()}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration, delay }}

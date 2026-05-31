@@ -88,6 +88,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @media (pointer: fine) {
+    html,
+    body,
+    *,
+    *::before,
+    *::after {
+      cursor: url('/cursor.png') 20 10, auto !important;
+    }
+  }
 }
 
 @layer utilities {

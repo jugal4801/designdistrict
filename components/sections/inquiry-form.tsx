@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FadeIn } from '../animations/fade-in'
+import { FORMSPREE_ENDPOINT, FORMSPREE_FORM_ID } from '@/lib/formspree'
 
 export function InquiryFormSection() {
   const [formData, setFormData] = useState({
@@ -28,17 +29,31 @@ export function InquiryFormSection() {
     setLoading(true)
     setError('')
 
+    if (FORMSPREE_FORM_ID === 'YOUR_FORM_ID_HERE') {
+      setError('Form is not configured. Add your Formspree form ID in lib/formspree.ts.')
+      setLoading(false)
+      return
+    }
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
+          Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.mobile,
+          message: formData.details,
+        }),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error('Failed to submit form')
+        throw new Error(data.error || 'Failed to submit form')
       }
 
       setSubmitted(true)
@@ -49,7 +64,6 @@ export function InquiryFormSection() {
         details: '',
       })
 
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false)
       }, 5000)

@@ -6,7 +6,7 @@ export function SiteMascot() {
       className="fixed bottom-4 left-4 z-40 pointer-events-none select-none"
       aria-hidden="true"
     >
-      <AnimatedMascot variant="corner" />
+      <AnimatedMascot />
     </div>
   )
 }

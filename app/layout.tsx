@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SiteMascot } from '@/components/site-mascot'
-import { SplashScreen } from '@/components/splash-screen'
 import './globals.css'
 
 const poppins = Poppins({
@@ -29,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <body className="font-poppins antialiased bg-background text-foreground">
-        <SplashScreen />
         {children}
         <SiteMascot />
         {process.env.NODE_ENV === 'production' && <Analytics />}

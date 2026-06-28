@@ -49,7 +49,7 @@ export function WhyChooseUsSection() {
                 ))}
               </ul>
 
-              <button className="mt-8 px-8 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50">
+              <button className="mt-8 px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50">
                 Schedule a Consultation
               </button>
             </div>

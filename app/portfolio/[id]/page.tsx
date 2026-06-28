@@ -178,7 +178,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
           </p>
           <Link
             href="/portfolio#inquiry"
-            className="inline-block px-8 py-4 bg-accent text-black font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50"
+            className="inline-block px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50"
           >
             Start Your Project
           </Link>

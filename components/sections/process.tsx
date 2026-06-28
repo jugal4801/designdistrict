@@ -59,7 +59,7 @@ export function ProcessSection() {
                   {/* Step card */}
                   <div className="bg-background border border-border rounded-xl p-6 h-full relative z-10 flex flex-col">
                     {/* Step number badge */}
-                    <div className="w-14 h-14 bg-accent text-black rounded-full flex items-center justify-center font-bold text-lg mb-4 relative -mt-10">
+                    <div className="w-14 h-14 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-lg mb-4 relative -mt-10">
                       {step.number}
                     </div>
 

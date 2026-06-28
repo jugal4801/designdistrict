@@ -23,7 +23,7 @@ export function PremiumButton({
 
   const variants = {
     primary:
-      'bg-accent text-black border-accent hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/50',
+      'bg-accent text-accent-foreground border-accent hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/50',
     secondary:
       'bg-transparent text-accent border-accent hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/20',
     ghost:

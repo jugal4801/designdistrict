@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { SiteMascot } from '@/components/site-mascot'
+import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const poppins = Poppins({
@@ -26,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <body className="font-poppins antialiased bg-background text-foreground">
-        {children}
-        <SiteMascot />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -8,20 +8,14 @@ const teamMembers = [
   {
     name: 'Mayur Suthar',
     role: 'Founder & Creative Director',
-    description: 'Visionary leader with 15+ years of design expertise and strategic brand building.',
+    description: 'Visionary leader with 5+ years of design expertise and strategic brand building.',
     image: '/team/mayur-suthar.jpg',
   },
   {
-    name: 'Bhavesh',
-    role: 'Co-Founder & Creative Director',
-    description: 'Expert in digital transformation and innovative design solutions for modern brands.',
-    image: '/team/bhavesh.jpg',
-  },
-  {
-    name: 'Gautam',
+    name: 'Jugal',
     role: 'Co-Founder & Creative Director',
     description: 'Specialist in premium design systems and comprehensive brand identity development.',
-    image: '/team/gautam.jpg',
+    image: '/team/jugal.jpg',
   },
 ]
 
@@ -61,7 +55,7 @@ export function TeamSection() {
         </FadeIn>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

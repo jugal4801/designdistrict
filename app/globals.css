@@ -4,6 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --background: #f7f9fc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #3b6eb5;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f0fb;
+  --secondary-foreground: #1e4a7a;
+  --muted: #e2ebf7;
+  --muted-foreground: #4a6789;
+  --accent: #3b6eb5;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #c5d7ef;
+  --input: #eef3fa;
+  --ring: #5b8ed5;
+  --chart-1: #3b6eb5;
+  --chart-2: #2a5fa3;
+  --chart-3: #1f4d8f;
+  --chart-4: #5b8ed5;
+  --chart-5: #6fa0d8;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #3b6eb5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f0fb;
+  --sidebar-accent-foreground: #1e4a7a;
+  --sidebar-border: #c5d7ef;
+  --sidebar-ring: #5b8ed5;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
   --card: #1a1a1a;
@@ -28,7 +64,6 @@
   --chart-3: #1f4d8f;
   --chart-4: #5b8ed5;
   --chart-5: #6fa0d8;
-  --radius: 0.5rem;
   --sidebar: #0a0a0a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #3b6eb5;
@@ -87,16 +122,6 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-
-  @media (pointer: fine) {
-    html,
-    body,
-    *,
-    *::before,
-    *::after {
-      cursor: url('/cursor.png') 20 10, auto !important;
-    }
   }
 }
 

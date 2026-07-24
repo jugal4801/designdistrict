@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { FadeIn } from '../animations/fade-in'
+import { TiltCard } from '../animations/tilt-card'
 import { Star } from 'lucide-react'
 
 export function TestimonialsSection() {
@@ -43,10 +43,7 @@ export function TestimonialsSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <FadeIn key={testimonial.name} delay={index * 0.1}>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="p-8 rounded-xl bg-card/50 border border-border hover:border-accent/50 transition-all duration-300"
-              >
+              <TiltCard className="p-8">
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -71,7 +68,7 @@ export function TestimonialsSection() {
                     {testimonial.role}
                   </p>
                 </div>
-              </motion.div>
+              </TiltCard>
             </FadeIn>
           ))}
         </div>

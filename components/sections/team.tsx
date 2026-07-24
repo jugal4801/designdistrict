@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FadeIn } from '../animations/fade-in'
+import { TiltCard } from '../animations/tilt-card'
 
 const teamMembers = [
   {
@@ -67,7 +68,7 @@ export function TeamSection() {
               variants={itemVariants}
               className="group"
             >
-              <div className="bg-card border border-border rounded-lg p-8 h-full transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-2">
+              <TiltCard className="p-8 h-full">
                 <div className="mb-6 w-24 h-24 mx-auto rounded-full overflow-hidden transform group-hover:scale-110 transition-transform duration-300 border-2 border-accent">
                   <Image
                     src={member.image}
@@ -77,19 +78,19 @@ export function TeamSection() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-foreground text-center mb-2">
                   {member.name}
                 </h3>
-                
+
                 <p className="text-accent text-center font-semibold text-sm mb-4">
                   {member.role}
                 </p>
-                
+
                 <p className="text-muted-foreground text-center text-sm leading-relaxed">
                   {member.description}
                 </p>
-              </div>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>

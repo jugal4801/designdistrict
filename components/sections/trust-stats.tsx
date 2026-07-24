@@ -1,6 +1,8 @@
 'use client'
 
 import { FadeIn } from '../animations/fade-in'
+import { InViewCanvas } from '../three/in-view-canvas'
+import { StatsParticles } from '../three/stats-particles'
 
 export function TrustStatsSection() {
   const stats = [
@@ -11,8 +13,9 @@ export function TrustStatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-card/30 border-y border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 bg-card/30 border-y border-border overflow-hidden">
+      <InViewCanvas Component={StatsParticles} className="absolute inset-0 pointer-events-none opacity-50" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <FadeIn key={stat.label} delay={index * 0.1}>

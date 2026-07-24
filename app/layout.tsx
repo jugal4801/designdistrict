@@ -1,13 +1,21 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { MotionProvider } from '@/components/motion-provider'
+import { ScrollProgress } from '@/components/animations/scroll-progress'
+import { CursorGlow } from '@/components/animations/cursor-glow'
 import './globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 })
 
 export const metadata: Metadata = {
@@ -26,10 +34,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
-      <body className="font-poppins antialiased bg-background text-foreground">
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <MotionProvider>
+            <ScrollProgress />
+            <CursorGlow />
+            {children}
+          </MotionProvider>
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

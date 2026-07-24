@@ -75,7 +75,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-inter);
   --font-poppins: var(--font-poppins);
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
@@ -123,6 +123,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
 }
 
 @layer utilities {
@@ -140,6 +143,50 @@
 
   .group-hover\:text-accent {
     @apply group-hover:text-accent;
+  }
+
+  /* Frosted glass surfaces, layered on the theme's card/border colors */
+  .glass {
+    @apply bg-card/40 backdrop-blur-xl border border-border/60;
+  }
+
+  .glass-strong {
+    @apply bg-card/60 backdrop-blur-2xl border border-border/70;
+  }
+
+  .shadow-soft {
+    box-shadow:
+      0 2px 8px -2px rgba(15, 23, 42, 0.06),
+      0 12px 32px -8px rgba(59, 110, 181, 0.12);
+  }
+
+  .shadow-soft-lg {
+    box-shadow:
+      0 8px 24px -6px rgba(15, 23, 42, 0.08),
+      0 24px 60px -12px rgba(59, 110, 181, 0.22);
+  }
+
+  .dark .shadow-soft {
+    box-shadow:
+      0 2px 10px -2px rgba(0, 0, 0, 0.5),
+      0 12px 32px -8px rgba(59, 110, 181, 0.25);
+  }
+
+  .dark .shadow-soft-lg {
+    box-shadow:
+      0 10px 30px -6px rgba(0, 0, 0, 0.6),
+      0 26px 65px -12px rgba(59, 110, 181, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

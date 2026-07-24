@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { portfolioProjects, categories } from '@/lib/portfolio-data'
 import { FadeIn } from '../animations/fade-in'
+import { TiltCard } from '../animations/tilt-card'
 
 export function PortfolioEnhancedSection() {
   const [selectedCategory, setSelectedCategory] = useState('All Work')
@@ -66,7 +67,7 @@ export function PortfolioEnhancedSection() {
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <div className="relative h-80 rounded-xl overflow-hidden border border-border/50 transition-all duration-300 hover:border-accent hover:shadow-2xl hover:shadow-accent/20 bg-card backdrop-blur-sm">
+                <TiltCard maxTilt={5} className="h-80 overflow-hidden">
                 {/* Image */}
                 <Image
                   src={project.image}
@@ -92,7 +93,7 @@ export function PortfolioEnhancedSection() {
                 <div className="absolute top-4 right-4 bg-accent/90 text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
                   {project.category}
                 </div>
-              </div>
+              </TiltCard>
             </motion.div>
             </Link>
           ))}

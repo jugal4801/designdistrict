@@ -32,7 +32,7 @@ function Card({ className, animated = true, delay = 0, ...props }: CardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      whileHover={{ y: -5, boxShadow: '0 20px 40px rgba(0, 255, 136, 0.1)' }}
+      whileHover={{ y: -5, boxShadow: '0 20px 40px -8px rgba(59, 110, 181, 0.2)' }}
     >
       {cardContent}
     </motion.div>

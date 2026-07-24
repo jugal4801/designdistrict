@@ -2,17 +2,26 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { PremiumButton } from '@/components/ui/premium-button'
+
+const HeroParticleNetwork = dynamic(
+  () => import('@/components/particles/hero-particle-network').then((m) => m.HeroParticleNetwork),
+  { ssr: false },
+)
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-card via-background to-background pointer-events-none" />
-      
+
       {/* Animated accent elements */}
       <div className="absolute top-1/4 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+
+      {/* Particle network, lazy-loaded and reduced-motion aware */}
+      <HeroParticleNetwork />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <motion.h1

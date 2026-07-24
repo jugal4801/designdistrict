@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { FadeIn } from '../animations/fade-in'
+import { TiltCard } from '../animations/tilt-card'
 import { Palette, Zap, Users, Layers, Target, Sparkles } from 'lucide-react'
 
 export function ServicesSection() {
@@ -57,10 +57,7 @@ export function ServicesSection() {
             const Icon = service.icon
             return (
               <FadeIn key={service.title} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  className="group p-8 rounded-xl bg-card/50 border border-border hover:border-accent/50 transition-all duration-300 backdrop-blur-sm"
-                >
+                <TiltCard className="group p-8">
                   <div className="mb-4 inline-flex p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors duration-300">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
@@ -70,7 +67,7 @@ export function ServicesSection() {
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
-                </motion.div>
+                </TiltCard>
               </FadeIn>
             )
           })}

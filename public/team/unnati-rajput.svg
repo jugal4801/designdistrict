@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="1024" height="1024">
+  <rect width="400" height="400" fill="#F4F1FB"/>
+
+  <!-- hair (back) -->
+  <path d="M112 190 C104 96 152 52 202 52 C252 52 300 96 292 190 C296 250 306 292 318 318 L86 318 C98 292 108 250 112 190 Z" fill="#2A1A1C"/>
+
+  <!-- blazer -->
+  <path d="M40 400 L40 372 C40 338 74 322 128 308 L168 296 L232 296 L272 308 C326 322 360 338 360 372 L360 400 Z" fill="#3B2E7E"/>
+  <!-- inner top -->
+  <path d="M158 298 L200 356 L242 298 Z" fill="#FAFAFA"/>
+  <!-- lapels -->
+  <path d="M158 298 L200 372 L170 400 L118 400 L128 330 Z" fill="#2F2466"/>
+  <path d="M242 298 L200 372 L230 400 L282 400 L272 330 Z" fill="#2F2466"/>
+
+  <!-- neck -->
+  <path d="M176 236 L176 292 C176 312 188 326 200 330 C212 326 224 312 224 292 L224 236 Z" fill="#E0A183"/>
+  <path d="M176 262 C190 280 210 282 224 270 L224 236 L176 236 Z" fill="#CF8F70"/>
+
+  <!-- ears -->
+  <ellipse cx="139" cy="192" rx="9" ry="15" fill="#EDB496"/>
+  <ellipse cx="261" cy="192" rx="9" ry="15" fill="#EDB496"/>
+
+  <!-- face -->
+  <path d="M144 170 C144 116 170 92 200 92 C230 92 256 116 256 170 C256 218 232 250 200 250 C168 250 144 218 144 170 Z" fill="#F2BC9F"/>
+  <path d="M144 176 C146 224 168 250 200 250 C176 240 160 214 158 176 Z" fill="#E6A588"/>
+
+  <!-- hair (front, side part) -->
+  <path d="M138 176 C122 100 160 62 204 62 C252 62 284 104 262 176 C258 146 248 120 226 108 C204 132 168 140 150 126 C144 140 140 158 138 176 Z" fill="#3A2527"/>
+  <path d="M150 126 C168 140 204 132 226 108" fill="none" stroke="#1F1315" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+
+  <!-- eyebrows -->
+  <path d="M166 158 Q178 150 190 156" fill="none" stroke="#2A1A1C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M210 156 Q222 150 234 158" fill="none" stroke="#2A1A1C" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <ellipse cx="178" cy="176" rx="7" ry="5" fill="#FFFFFF"/>
+  <ellipse cx="222" cy="176" rx="7" ry="5" fill="#FFFFFF"/>
+  <circle cx="178" cy="176" r="4" fill="#2A1A1C"/>
+  <circle cx="222" cy="176" r="4" fill="#2A1A1C"/>
+  <path d="M170 172 Q178 167 186 172" fill="none" stroke="#2A1A1C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M214 172 Q222 167 230 172" fill="none" stroke="#2A1A1C" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- nose -->
+  <path d="M200 182 C197 196 194 204 199 208 C203 210 208 208 208 204" fill="none" stroke="#D08E70" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- lips -->
+  <path d="M184 224 Q192 220 200 223 Q208 220 216 224 Q208 234 200 234 Q192 234 184 224 Z" fill="#C4576A"/>
+  <path d="M184 224 Q192 220 200 223 Q208 220 216 224" fill="none" stroke="#A9445A" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- earrings -->
+  <circle cx="139" cy="212" r="3.5" fill="#F0C75E"/>
+  <circle cx="261" cy="212" r="3.5" fill="#F0C75E"/>
+</svg>

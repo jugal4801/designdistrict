@@ -4,17 +4,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FadeIn } from '../animations/fade-in'
 import { PremiumButton } from '@/components/ui/premium-button'
-import { InViewCanvas } from '../three/in-view-canvas'
-import { FloatingShape } from '../three/floating-shape'
 
 export function CTASection() {
   return (
-    <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card/20 overflow-hidden">
-      <InViewCanvas
-        Component={FloatingShape}
-        componentProps={{ count: 3 }}
-        className="absolute inset-0 pointer-events-none opacity-40"
-      />
+    <section id="contact" className="relative py-20 md:py-32 overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
           <div className="eyebrow mx-auto justify-center mb-6">Let&apos;s Talk</div>

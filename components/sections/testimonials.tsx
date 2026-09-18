@@ -7,21 +7,21 @@ import { Star } from 'lucide-react'
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      content: 'NEXTPIXEL STUDIO transformed our brand identity. Their strategic approach and creative excellence exceeded all expectations.',
+      name: 'Priya Sharma',
+      role: 'Founder, Kalakriti Jewels, Jaipur',
+      content: 'Mayur and team gave our jewellery brand a whole new look. Customers now recognise us instantly, and our Instagram enquiries have almost doubled since the rebrand. Really happy with the work!',
       rating: 5,
     },
     {
-      name: 'Marcus Chen',
-      role: 'Creative Director, Luna Cosmetics',
-      content: 'Working with NEXTPIXEL STUDIO was a game-changer. They understood our vision and brought it to life beautifully.',
+      name: 'Rohan Mehta',
+      role: 'Owner, Chai & Co., Ahmedabad',
+      content: 'We were confused about our logo and packaging, but NEXTPIXEL sorted everything so smoothly. They listened to every small detail, delivered on time, and the pricing was very fair.',
       rating: 5,
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'Founder, Artisan Bakery',
-      content: 'The packaging design they created for us became our best-selling feature. Highly professional and creative.',
+      name: 'Ananya Iyer',
+      role: 'Co-founder, Organic Roots, Bengaluru',
+      content: 'The packaging design they made for us is now our best-selling product. Our distributors keep asking who designed it. Highly recommended for any startup!',
       rating: 5,
     },
   ]

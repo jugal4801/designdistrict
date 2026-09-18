@@ -2,8 +2,6 @@
 
 import Link from 'next/link'
 import { FadeIn } from '../animations/fade-in'
-import { InViewCanvas } from '../three/in-view-canvas'
-import { MorphSphere } from '../three/morph-sphere'
 import { PremiumButton } from '@/components/ui/premium-button'
 import { CheckCircle } from 'lucide-react'
 
@@ -25,7 +23,6 @@ export function WhyChooseUsSection() {
           <FadeIn direction="right">
             <div className="relative h-96 bg-card rounded-sm border border-border overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <InViewCanvas Component={MorphSphere} className="absolute inset-0" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center">
                   <div className="font-display text-6xl font-bold text-accent/30 mb-4">Quality</div>

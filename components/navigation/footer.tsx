@@ -15,7 +15,7 @@ export function Footer() {
     ],
     Company: [
       { label: 'About Us', href: '#about' },
-      { label: 'Our Work', href: '#portfolio' },
+      { label: 'Pricing', href: '#pricing' },
       { label: 'Process', href: '#process' },
       { label: 'Contact', href: '#contact' },
     ],
@@ -34,8 +34,8 @@ export function Footer() {
           {/* Brand section */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <span className="font-display text-xl font-bold tracking-tight text-foreground">
-                NEXT<span className="text-accent">PIXEL</span>
+              <span className="text-2xl font-bold text-accent">
+                NEXTPIXEL
               </span>
             </Link>
             <p className="text-muted-foreground mb-4">

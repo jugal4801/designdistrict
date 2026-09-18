@@ -65,11 +65,6 @@ export function HeroSection() {
                 Start Your Project
               </PremiumButton>
             </Link>
-            <Link href="#portfolio" className="block">
-              <PremiumButton variant="secondary" size="lg">
-                View Our Work
-              </PremiumButton>
-            </Link>
           </motion.div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export function Navbar() {
 
   const navLinks = [
     { label: 'Services', href: '#services' },
-    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Pricing', href: '#pricing' },
     { label: 'About', href: '#about' },
     { label: 'Process', href: '#process' },
     { label: 'Testimonials', href: '#testimonials' },
@@ -22,8 +22,8 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="font-display text-xl font-bold tracking-tight text-foreground">
-              NEXT<span className="text-accent">PIXEL</span>
+            <span className="text-2xl font-bold text-accent">
+              NEXTPIXEL
             </span>
           </Link>
 

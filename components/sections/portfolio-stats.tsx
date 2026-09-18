@@ -28,7 +28,7 @@ export function PortfolioStatsSection() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-4xl md:text-5xl font-bold text-accent mb-2"
+                  className="font-display text-4xl md:text-5xl font-bold text-accent mb-2"
                 >
                   {stat.number}
                 </motion.div>

@@ -34,8 +34,8 @@ export function Footer() {
           {/* Brand section */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-accent">
-                NEXTPIXEL
+              <span className="font-display text-xl font-bold tracking-tight text-foreground">
+                NEXT<span className="text-accent">PIXEL</span>
               </span>
             </Link>
             <p className="text-muted-foreground mb-4">
@@ -54,7 +54,7 @@ export function Footer() {
           {/* Links sections */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-semibold text-foreground mb-4">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground mb-4">
                 {category}
               </h4>
               <ul className="space-y-2">
@@ -74,7 +74,7 @@ export function Footer() {
 
           {/* Contact section */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground mb-4">
               Contact
             </h4>
             <ul className="space-y-3">

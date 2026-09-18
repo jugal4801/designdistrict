@@ -20,10 +20,10 @@ export function TrustStatsSection() {
           {stats.map((stat, index) => (
             <FadeIn key={stat.label} delay={index * 0.1}>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">
+                <div className="font-display text-3xl md:text-4xl font-bold text-accent mb-2">
                   {stat.value}
                 </div>
-                <p className="text-muted-foreground text-sm md:text-base">
+                <p className="text-muted-foreground text-xs md:text-sm uppercase tracking-wide">
                   {stat.label}
                 </p>
               </div>

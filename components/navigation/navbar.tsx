@@ -22,18 +22,18 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-accent">
-              NEXTPIXEL
+            <span className="font-display text-xl font-bold tracking-tight text-foreground">
+              NEXT<span className="text-accent">PIXEL</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors duration-300"
+                className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70 hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -45,7 +45,7 @@ export function Navbar() {
             <ThemeToggle />
             <Link
               href="#contact"
-              className="px-6 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50"
+              className="px-5 py-2 border border-foreground text-xs font-semibold uppercase tracking-[0.1em] text-foreground hover:bg-foreground hover:text-background transition-colors duration-300 rounded-sm"
             >
               Get Started
             </Link>
@@ -71,7 +71,7 @@ export function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-foreground hover:text-accent transition-colors"
+                  className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70 hover:text-accent transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -79,7 +79,7 @@ export function Navbar() {
               ))}
               <Link
                 href="#contact"
-                className="px-6 py-2 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all text-center"
+                className="px-6 py-2 border border-foreground text-xs font-semibold uppercase tracking-[0.1em] rounded-sm hover:bg-foreground hover:text-background transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started

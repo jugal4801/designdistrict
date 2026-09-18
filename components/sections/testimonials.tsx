@@ -31,6 +31,7 @@ export function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="text-center mb-16">
+            <div className="eyebrow mx-auto justify-center mb-6">Testimonials</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What Our <span className="text-accent">Clients</span> Say
             </h2>
@@ -43,20 +44,22 @@ export function TestimonialsSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <FadeIn key={testimonial.name} delay={index * 0.1}>
-              <TiltCard className="p-8">
+              <TiltCard glass={false} className="p-8">
+                <span className="font-display block text-5xl text-accent/30 leading-none mb-2">&ldquo;</span>
+
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 text-accent fill-accent"
+                      className="w-4 h-4 text-accent fill-accent"
                     />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-foreground mb-6 leading-relaxed italic">
-                  &quot;{testimonial.content}&quot;
+                <p className="text-foreground mb-6 leading-relaxed">
+                  {testimonial.content}
                 </p>
 
                 {/* Author */}

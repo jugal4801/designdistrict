@@ -46,6 +46,7 @@ export function TeamSection() {
       <div className="max-w-6xl mx-auto">
         <FadeIn delay={0.1}>
           <div className="text-center mb-16">
+            <div className="eyebrow mx-auto justify-center mb-6">The People</div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Meet Our Team
             </h2>
@@ -69,12 +70,12 @@ export function TeamSection() {
               className="group"
             >
               <TiltCard className="p-8 h-full">
-                <div className="mb-6 w-24 h-24 mx-auto rounded-full overflow-hidden transform group-hover:scale-110 transition-transform duration-300 border-2 border-accent">
+                <div className="mb-6 w-28 h-28 mx-auto rounded-sm overflow-hidden transform group-hover:scale-105 transition-transform duration-300 border border-accent">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={96}
-                    height={96}
+                    width={112}
+                    height={112}
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -20,13 +20,13 @@ const options: ISourceOptions = {
       value: 70,
       density: { enable: true, width: 1600, height: 900 },
     },
-    color: { value: ['#3b6eb5', '#5b8ed5'] },
+    color: { value: ['#3d2eff', '#6a5cff'] },
     opacity: { value: 0.5 },
     size: { value: { min: 1, max: 2.5 } },
     links: {
       enable: true,
       distance: 130,
-      color: '#3b6eb5',
+      color: '#3d2eff',
       opacity: 0.15,
       width: 1,
     },
@@ -47,7 +47,7 @@ const options: ISourceOptions = {
     modes: {
       grab: {
         distance: 180,
-        links: { opacity: 0.6, color: '#5b8ed5' },
+        links: { opacity: 0.6, color: '#6a5cff' },
       },
     },
   },

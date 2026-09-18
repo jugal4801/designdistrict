@@ -22,6 +22,7 @@ export function PortfolioEnhancedSection() {
         {/* Header */}
         <FadeIn delay={0.1}>
           <div className="text-center mb-16">
+            <div className="eyebrow mx-auto justify-center mb-6">Selected Work</div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Crafting Brands That Stand Out
             </h2>
@@ -38,12 +39,11 @@ export function PortfolioEnhancedSection() {
               <motion.button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+                whileTap={{ scale: 0.97 }}
+                className={`px-5 py-2 rounded-sm text-sm font-semibold uppercase tracking-wide transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-accent text-accent-foreground shadow-lg shadow-accent/50'
-                    : 'bg-card border border-border text-foreground hover:border-accent'
+                    ? 'bg-foreground text-background'
+                    : 'bg-transparent border border-border text-foreground hover:border-accent'
                 }`}
               >
                 {category}
@@ -90,7 +90,7 @@ export function PortfolioEnhancedSection() {
                 </div>
 
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 bg-accent/90 text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-4 right-4 bg-background/90 text-foreground px-3 py-1 rounded-sm text-xs font-semibold uppercase tracking-wide">
                   {project.category}
                 </div>
               </TiltCard>

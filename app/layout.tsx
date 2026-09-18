@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Poppins, Inter } from 'next/font/google'
+import { Space_Grotesk, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { MotionProvider } from '@/components/motion-provider'
@@ -7,10 +7,10 @@ import { ScrollProgress } from '@/components/animations/scroll-progress'
 import { CursorGlow } from '@/components/animations/cursor-glow'
 import './globals.css'
 
-const poppins = Poppins({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
 })
 
 const inter = Inter({
@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased bg-background text-foreground" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <MotionProvider>
             <ScrollProgress />

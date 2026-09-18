@@ -32,6 +32,7 @@ export function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="text-center mb-16">
+            <div className="eyebrow mx-auto justify-center mb-6">How We Work</div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Our <span className="text-accent">Process</span>
             </h2>
@@ -57,9 +58,9 @@ export function ProcessSection() {
                   className="relative h-full"
                 >
                   {/* Step card */}
-                  <div className="bg-background border border-border rounded-xl p-6 h-full relative z-10 flex flex-col">
+                  <div className="bg-background border border-border rounded-sm p-6 h-full relative z-10 flex flex-col">
                     {/* Step number badge */}
-                    <div className="w-14 h-14 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-lg mb-4 relative -mt-10">
+                    <div className="w-14 h-14 bg-accent text-accent-foreground rounded-sm flex items-center justify-center font-display font-bold text-lg mb-4 relative -mt-10">
                       {step.number}
                     </div>
 

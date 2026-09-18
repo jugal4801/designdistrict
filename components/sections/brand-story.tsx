@@ -12,6 +12,7 @@ export function BrandStorySection() {
           {/* Left side */}
           <FadeIn direction="right">
             <div>
+              <div className="eyebrow mb-6">About Us</div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-accent">Crafting</span> Visual Excellence
               </h2>
@@ -34,12 +35,12 @@ export function BrandStorySection() {
 
           {/* Right side - visual placeholder */}
           <FadeIn direction="left">
-            <div className="relative h-96 bg-gradient-to-br from-card to-card/50 rounded-xl border border-border overflow-hidden group">
+            <div className="relative h-96 bg-card rounded-sm border border-border overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <InViewCanvas Component={FloatingShape} />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-accent/30 mb-4">Design</div>
+                  <div className="font-display text-6xl font-bold text-accent/30 mb-4">Design</div>
                   <p className="text-muted-foreground">Visual excellence in every pixel</p>
                 </div>
               </div>

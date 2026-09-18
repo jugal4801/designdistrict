@@ -47,7 +47,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
                 alt={`${project.title} logo`}
                 width={80}
                 height={80}
-                className="rounded-lg bg-card/50 backdrop-blur-sm p-3"
+                className="rounded-sm bg-card/50 backdrop-blur-sm p-3"
               />
             )}
             <div>
@@ -67,21 +67,21 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
       <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
         <FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-sm p-6">
               <h3 className="text-sm uppercase tracking-wide text-accent font-semibold mb-3">
                 Timeline
               </h3>
               <p className="text-2xl font-bold text-foreground">{project.timeline}</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-sm p-6">
               <h3 className="text-sm uppercase tracking-wide text-accent font-semibold mb-3">
                 Category
               </h3>
               <p className="text-2xl font-bold text-foreground">{project.category}</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 md:col-span-2">
+            <div className="bg-card border border-border rounded-sm p-6 md:col-span-2">
               <h3 className="text-sm uppercase tracking-wide text-accent font-semibold mb-3">
                 Tools & Technologies
               </h3>
@@ -89,7 +89,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
                 {project.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-sm text-foreground"
+                    className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-sm text-sm text-foreground"
                   >
                     {tool}
                   </span>
@@ -111,7 +111,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border rounded-lg p-6 hover:border-accent hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
+                className="bg-card border border-border rounded-sm p-6 hover:border-accent hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-foreground">{service}</h3>
               </motion.div>
@@ -132,7 +132,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="relative h-80 md:h-96 rounded-lg overflow-hidden group cursor-pointer"
+                  className="relative h-80 md:h-96 rounded-sm overflow-hidden group cursor-pointer"
                 >
                   <Image
                     src={image}
@@ -150,8 +150,8 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
       {/* Testimonial Section */}
       <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto border-t border-border">
         <FadeIn>
-          <div className="bg-card border border-border rounded-lg p-12 text-center">
-            <div className="text-accent text-5xl mb-6">"</div>
+          <div className="bg-card border border-border rounded-sm p-12 text-center">
+            <div className="font-display text-accent text-5xl mb-6">&ldquo;</div>
             <p className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed">
               {project.testimonial.quote}
             </p>
@@ -178,7 +178,7 @@ export default function PortfolioPage({ params }: PortfolioPageProps) {
           </p>
           <Link
             href="/portfolio#inquiry"
-            className="inline-block px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50"
+            className="inline-block px-8 py-4 bg-foreground text-background font-semibold uppercase tracking-[0.08em] text-sm rounded-sm hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
           >
             Start Your Project
           </Link>

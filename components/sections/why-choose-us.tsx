@@ -1,8 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import { FadeIn } from '../animations/fade-in'
 import { InViewCanvas } from '../three/in-view-canvas'
 import { MorphSphere } from '../three/morph-sphere'
+import { PremiumButton } from '@/components/ui/premium-button'
 import { CheckCircle } from 'lucide-react'
 
 export function WhyChooseUsSection() {
@@ -21,12 +23,12 @@ export function WhyChooseUsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - visual placeholder */}
           <FadeIn direction="right">
-            <div className="relative h-96 bg-gradient-to-br from-card to-card/50 rounded-xl border border-border overflow-hidden group">
+            <div className="relative h-96 bg-card rounded-sm border border-border overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <InViewCanvas Component={MorphSphere} className="absolute inset-0" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-accent/30 mb-4">Quality</div>
+                  <div className="font-display text-6xl font-bold text-accent/30 mb-4">Quality</div>
                   <p className="text-muted-foreground">Uncompromising excellence</p>
                 </div>
               </div>
@@ -36,8 +38,9 @@ export function WhyChooseUsSection() {
           {/* Right side */}
           <FadeIn direction="left">
             <div>
+              <div className="eyebrow mb-6">Why Us</div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why Choose <span className="text-accent">SleekMethod</span>
+                Why Choose <span className="text-accent">NEXTPIXEL</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 We&apos;re not just designers—we&apos;re strategic partners invested in your success. Here&apos;s why leading brands choose us.
@@ -52,9 +55,11 @@ export function WhyChooseUsSection() {
                 ))}
               </ul>
 
-              <button className="mt-8 px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/50">
-                Schedule a Consultation
-              </button>
+              <Link href="#contact" className="inline-block mt-8">
+                <PremiumButton variant="primary" size="md">
+                  Schedule a Consultation
+                </PremiumButton>
+              </Link>
             </div>
           </FadeIn>
         </div>

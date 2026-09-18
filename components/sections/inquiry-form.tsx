@@ -80,6 +80,7 @@ export function InquiryFormSection() {
       <div className="max-w-2xl mx-auto">
         <FadeIn delay={0.1}>
           <div className="text-center mb-12">
+            <div className="eyebrow mx-auto justify-center mb-6">Start a Project</div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Get in Touch
             </h2>
@@ -94,7 +95,7 @@ export function InquiryFormSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-accent/20 border border-accent rounded-lg p-8 text-center"
+              className="bg-accent/10 border border-accent rounded-sm p-8 text-center"
             >
               <h3 className="text-2xl font-bold text-accent mb-2">Thank You!</h3>
               <p className="text-foreground">
@@ -107,7 +108,7 @@ export function InquiryFormSection() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-destructive/20 border border-destructive rounded-lg p-4 text-destructive text-sm"
+                  className="bg-destructive/10 border border-destructive rounded-sm p-4 text-destructive text-sm"
                 >
                   {error}
                 </motion.div>
@@ -128,7 +129,7 @@ export function InquiryFormSection() {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
                   placeholder="Your name"
                 />
               </motion.div>
@@ -148,7 +149,7 @@ export function InquiryFormSection() {
                   value={formData.mobile}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
                   placeholder="+1 (555) 000-0000"
                 />
               </motion.div>
@@ -168,7 +169,7 @@ export function InquiryFormSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
                   placeholder="you@example.com"
                 />
               </motion.div>
@@ -188,7 +189,7 @@ export function InquiryFormSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300 resize-none"
                   placeholder="Tell us about your project, ideas, or requirements..."
                 />
               </motion.div>
@@ -202,7 +203,7 @@ export function InquiryFormSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:shadow-accent/30 transform hover:scale-105 active:scale-95"
+                  className="w-full px-8 py-4 bg-foreground text-background font-semibold uppercase tracking-[0.08em] text-sm rounded-sm hover:bg-accent hover:text-accent-foreground transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? 'Sending...' : 'Send Inquiry'}
                 </button>

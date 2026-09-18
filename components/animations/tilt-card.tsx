@@ -51,10 +51,10 @@ export function TiltCard({
       style={{ rotateX, rotateY, transformPerspective: 800 }}
       whileHover={shouldReduceMotion ? undefined : { y: -lift, scale: 1.01 }}
       className={cn(
-        'relative rounded-xl transition-colors duration-300 shadow-soft hover:shadow-soft-lg',
+        'relative rounded-sm transition-colors duration-300 shadow-soft hover:shadow-soft-lg',
         glass
-          ? 'bg-card/40 backdrop-blur-xl border border-border/60 hover:border-accent/50'
-          : 'bg-card border border-border hover:border-accent/50',
+          ? 'bg-card/40 backdrop-blur-xl border border-border hover:border-accent'
+          : 'bg-card border border-border hover:border-accent',
         className,
       )}
     >

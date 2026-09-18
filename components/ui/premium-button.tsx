@@ -19,31 +19,34 @@ export function PremiumButton({
   size = 'md',
 }: PremiumButtonProps) {
   const baseClasses =
-    'font-poppins font-semibold transition-all duration-300 rounded-lg border';
+    'group/btn relative inline-flex items-center justify-center gap-2.5 font-sans font-semibold uppercase tracking-[0.08em] transition-colors duration-300 rounded-sm border overflow-hidden';
 
   const variants = {
     primary:
-      'bg-accent text-accent-foreground border-accent hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/50',
+      'bg-foreground text-background border-foreground hover:text-accent-foreground',
     secondary:
-      'bg-transparent text-accent border-accent hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/20',
+      'bg-transparent text-foreground border-foreground/30 hover:border-foreground',
     ghost:
-      'bg-transparent text-foreground border-muted hover:border-accent hover:text-accent',
+      'bg-transparent text-foreground border-transparent hover:text-accent',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-5 py-2.5 text-xs',
+    md: 'px-7 py-3.5 text-sm',
+    lg: 'px-9 py-4.5 text-sm',
   };
 
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.97 }}
       onClick={onClick}
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
     >
-      {children}
+      {variant === 'primary' && (
+        <span className="absolute inset-0 -z-10 origin-left scale-x-0 bg-accent transition-transform duration-300 ease-out group-hover/btn:scale-x-100" />
+      )}
+      <span className="relative">{children}</span>
+      <span className="relative transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
     </motion.button>
   );
 }

@@ -17,7 +17,8 @@ export function CTASection() {
       />
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="eyebrow mx-auto justify-center mb-6">Let&apos;s Talk</div>
+          <h2 className="font-display font-bold mb-6 leading-[1.05] text-[clamp(2.25rem,6vw,4.5rem)]">
             Ready to Transform <span className="text-accent">Your Brand</span>?
           </h2>
         </FadeIn>
